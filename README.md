@@ -1,12 +1,13 @@
-## Bienvenidos a Zenbyte-404
+# 🚀 Bienvenidos a **Zenbyte-404**
 
 
 ### Integrantes
 
-| Nombre                | Usuario de GitHub                                |
-|-----------------------|--------------------------------------------------|
-| Nombre       | [nombre de usuario](linkgithub)        | 
-| Menón Nicolas         | [Nico0626](linkgithub)           | 
-| Nombre     | [nombre de usuario](linkgithub)           |
-| Nombre       | [nombre de usuario](linkgithub) |
-| Nombre           | [nombre de usuario](linkgithub)     |
+| Nº | Nombre en GitHub | Nombre completo (si aparece) |
+|:--:|:-----------------|:-----------------------------|
+| 1  | [Nico0626](https://github.com/Nico0626) | Nicolas|
+| 2  | [marian-casa](https://github.com/marian-casa) | Mariano Casarino |
+| 3  | [JoseTiranti](https://github.com/JoseTiranti) | Jose Tiranti |
+| 4  | [Matias Saig](https://github.com/Matias-Saig) | Matias Saig |
+| 5  | [Agustín G.](https://github.com/AgustinGibaut) | Agustin Gibaut |
+| 6  | [FabianPerisset](https://github.com/FabianPerisset) | Fabian Perisset |
