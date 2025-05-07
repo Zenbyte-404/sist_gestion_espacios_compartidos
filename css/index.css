@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: radial-gradient(ellipse at center, #0a0e2a 0%, var(--color-bg) 70%);
+  }
+  
+  /* === Layout === */
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px var(--color-glow);
+  }
+  
+  /* === Nav con variantes de colores === */
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s;
+  }
+  
+  /* Variantes de colores para navegación */
+  .nav-link-purple {
+    color: var(--color-primary);
+  }
+  .nav-link-purple:hover {
+    color: var(--color-nav-purple);
+  }
+  .nav-link-purple::after {
+    background-color: var(--color-nav-purple);
+  }
+  
+  .nav-link-blue {
+    color: var(--color-primary);
+  }
+  .nav-link-blue:hover {
+    color: var(--color-nav-blue);
+  }
+  .nav-link-blue::after {
+    background-color: var(--color-nav-blue);
+  }
+  
+  .nav-link-pink {
+    color: var(--color-primary);
+  }
+  .nav-link-pink:hover {
+    color: var(--color-nav-pink);
+  }
+  .nav-link-pink::after {
+    background-color: var(--color-nav-pink);
+  }
+  
+  .nav-link-green {
+    color: var(--color-primary);
+  }
+  .nav-link-green:hover {
+    color: var(--color-nav-green);
+  }
+  .nav-link-green::after {
+    background-color: var(--color-nav-green);
+  }
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* === Hero === */
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 2rem;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px; /* Reducido de 20px a 10px para juntar más los textos */
+  }
+  
+  .text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espacio reducido entre párrafos */
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px var(--color-glow);
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+    color: var(--color-subtext);
+    line-height: 1.4; /* Reducido de 1.5 para juntar más el texto */
+  }
+  
+  .cta-button {
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent-dark));
+    color: var(--color-primary);
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(26, 86, 219, 0.3);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(26, 86, 219, 0.5);
+  }
+  
+  .cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--color-glow-intense), transparent);
+    transition: left 0.7s;
+  }
+  
+  .cta-button:hover::before {
+    left: 100%;
+  }
+  
+  /* === Logo image with glow === */
+  .logo-image-container {
+    position: relative;
+  }
+  
+  .logo-image {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .logo-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: radial-gradient(circle, var(--color-glow-intense) 0%, transparent 70%);
+    animation: flicker 1.5s infinite ease-in-out, pulse 3s infinite ease-in-out;
+    z-index: 1;
+  }
+  
+  /* === Nuevas animaciones === */
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-in-out both;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 1s ease-in-out both;
+  }
+  
+  .animate-slide-left {
+    animation: slideLeftFade 1s ease-in-out both;
+  }
+  
+  .animate-bounce {
+    animation: bounce 1s ease-in-out 0.5s both;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  /* === Animations === */
+  @keyframes flicker {
+    0%,
+    100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes pulse {
+    0%,
+    100% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.5);
+    }
+  }
+  
+  @keyframes slideLeftFade {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideRightFade {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* === Extras: Star, UFO, Nebula === */
+  .star {
+    position: absolute;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 2s infinite ease-in-out;
+    z-index: 0;
+  }
+  
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .nebula {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(30px);
+    opacity: 0.2;
+    z-index: 0;
+  }
+  
+  .ufo {
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    animation: flyUfo 15s linear infinite;
+    z-index: 3;
+  }
+  
+  .ufo-body {
+    background: linear-gradient(to bottom, var(--color-ufo-body), var(--color-ufo-shadow));
+    border-radius: 50%;
+    width: 60px;
+    height: 15px;
+    box-shadow: 0 0 15px var(--color-ufo-body);
+  }
+  
+  .ufo-dome {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    width: 30px;
+    height: 15px;
+    background: var(--color-ufo-dome);
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0 10px #add8e6;
+  }
+  
+  .ufo-light {
+    position: absolute;
+    bottom: -15px;
+    left: 25px;
+    width: 10px;
+    height: 15px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    animation: ufoLight 2s infinite;
+  }
+  
+  @keyframes flyUfo {
+    0% {
+      left: -100px;
+      top: 20%;
+      transform: rotate(10deg);
+    }
+    25% {
+      top: 15%;
+      transform: rotate(-5deg);
+    }
+    50% {
+      top: 25%;
+      transform: rotate(5deg);
+    }
+    75% {
+      top: 10%;
+      transform: rotate(-10deg);
+    }
+    100% {
+      left: 100vw;
+      top: 20%;
+      transform: rotate(10deg);
+    }
+  }
+  
+  @keyframes ufoLight {
+    0%,
+    100% {
+      opacity: 0.3;
+      height: 15px;
+    }
+    50% {
+      opacity: 0.8;
+      height: 25px;
+    }
+  }
+  
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 24px;
+    }
+  
+    nav ul {
+      gap: 15px;
+    }
+  
+    .hero-container {
+      flex-direction: column;
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .hero-content,
+    .logo-image-container {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .hero-title {
+      font-size: 36px;
+    }
+  
+    .hero-subtitle {
+      font-size: 16px;
+    }
+  
+    .cta-button {
+      margin: 0 auto;
+    }
+  }
+  
+  /* Estilos adicionales para Bootstrap */
+  h3 {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .hero-content p {
+    margin-bottom: 8px; /* Reducido de 15px a 8px */
+  }
+  
+  .hero-content i {
+    margin-right: 10px;
+    color: var(--color-accent);
+  }
+  

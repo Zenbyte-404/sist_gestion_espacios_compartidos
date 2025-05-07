@@ -1,0 +1,25 @@
+:root {
+    /* Colores principales */
+    --color-bg: #0a0a1a;
+    --color-primary: #ffffff;
+    --color-subtext: #b8b8d4;
+    --color-accent: #9370db;
+    --color-accent-light: #a58fe0;
+    --color-accent-dark: #7b54c9;
+  
+    /* Efectos de brillo */
+    --color-glow: rgba(147, 112, 219, 0.5);
+    --color-glow-intense: rgba(147, 112, 219, 0.8);
+  
+    /* Colores OVNI */
+    --color-ufo-body: #9370db;
+    --color-ufo-dome: rgba(173, 216, 230, 0.7);
+    --color-ufo-shadow: #6a5acd;
+  
+    /* Colores de navegación */
+    --color-nav-purple: #9370db;
+    --color-nav-blue: #4169e1;
+    --color-nav-pink: #ff69b4;
+    --color-nav-green: #3cb371;
+  }
+  
