@@ -75,21 +75,15 @@
         <nav>
           <ul>
             <li>
-              <a href="index.html" class="nav-link-purple nav-glow slide-down delay-100"
-                >Inicio</a
-              >
+              <a href="index.html" class="nav-link-purple nav-glow slide-down delay-100">Inicio</a>
             </li>
             <li>
               <a
                 href="quienes_somos.html"
-                class="nav-link-blue nav-glow slide-down delay-200"
-                >Quienes somos</a
-              >
+                class="nav-link-blue nav-glow slide-down delay-200">Quienes somos</a>
             </li>
             <li>
-              <a href="login.html" class="nav-link-green nav-glow slide-down delay-400"
-                >Ingresar</a
-              >
+              <a href="login.html" class="nav-link-green nav-glow slide-down delay-400">Ingresar</a>
             </li>
           </ul>
         </nav>
@@ -145,12 +139,14 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Añadir efecto de desplazamiento suave a los enlaces de navegación
-        document.querySelectorAll("nav a").forEach((anchor) => {
+       /*  
+       ESTO INHIBE LA FUNCION NORMAL DE LOS ENLACES
+       document.querySelectorAll("nav a").forEach((anchor) => {
           anchor.addEventListener("click", function (e) {
             e.preventDefault();
             console.log("Navegando a:", this.getAttribute("href"));
           });
-        });
+        }); */
 
         // Efecto hover para el botón CTA
         const ctaButton = document.querySelector(".cta-button");
