@@ -17,4 +17,4 @@
 
 ### Deploy
 
-[https://zenbyte-404.github.io/sist_gestion_espacios_compartidos/](https://zenbyte-404.github.io/sist_gestion_espacios_compartidos/) 
+[https://zenbyte-404.github.io/sist_gestion_espacios_compartidos/front-end/index.html](https://zenbyte-404.github.io/sist_gestion_espacios_compartidos/front-end/index.html) 
