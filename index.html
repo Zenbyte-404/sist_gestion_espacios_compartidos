@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <title>Document</title>
+    <title>Reservita - Sistema de Reservas 2025</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/galaxy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor de partículas -->
+    <div id="particles-js"></div>
+    
+    <!-- Contenedor de OVNI -->
+    <div class="ufo">
+        <div class="ufo-body"></div>
+        <div class="ufo-dome"></div>
+        <div class="ufo-light"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-spin">
+                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="white" stroke-width="2"/>
+                    <path d="M3 10H21" stroke="white" stroke-width="2"/>
+                    <path d="M9 2L9 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M15 2L15 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M9 14L11 16L15 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1 class="logo-text text-gradient">Reservita</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link-purple nav-glow slide-down delay-100">Inicio</a></li>
+                    <li><a href="#" class="nav-link-blue nav-glow slide-down delay-200">Nosotros</a></li>
+                    <li><a href="#" class="nav-link-pink nav-glow slide-down delay-300">Contacto</a></li>
+                    <li><a href="#" class="nav-link-green nav-glow slide-down delay-400">Objetivo</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="hero-container row">
+            <!-- Texto e íconos a la izquierda -->
+            <div class="hero-content col-md-6">
+                <h2 class="hero-title blur-in">
+                    <i class="fas fa-rocket icon-bounce"></i> Bienvenido a Reservita
+                </h2>
+                <h3 class="mt-2 mb-3 slide-up delay-300">Sistema de Reservas 2025</h3>
+                <div class="text-group">
+                    <p class="hero-subtitle mb-2 slide-left delay-400">
+                        <i class="fas fa-calendar-check icon-pulse"></i> El sistema más rápido y sencillo para reservar tu espacio ideal
+                    </p>
+                    <p class="hero-subtitle mb-2 slide-left delay-500">
+                        <i class="fas fa-map-marker-alt icon-shake"></i> Encuentra y reserva espacios en tiempo real con nuestra plataforma intuitiva
+                    </p>
+                    <p class="hero-subtitle mb-3 slide-left delay-600">
+                        <i class="fas fa-star star-twinkle"></i> Disfruta de una experiencia de usuario excepcional con nuestras funciones avanzadas
+                    </p>
+                </div>
+                <button class="cta-button btn-pulse delay-700 shadow-pulse">
+                    <i class="fas fa-search icon-bounce"></i> Explorar ahora
+                </button>
+            </div>
+        
+            <!-- Logo a la derecha con destellos -->
+            <div class="logo-image-container col-md-6 d-flex justify-content-center align-items-center float">
+                <div class="logo-glow nebula-pulse"></div>
+                <img src="imagenes/logo.jpeg" alt="Logo Reservita" class="logo-image zoom-in delay-200">
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script de Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/galaxy-particles.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Añadir efecto de desplazamiento suave a los enlaces de navegación
+            document.querySelectorAll("nav a").forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    console.log("Navegando a:", this.getAttribute("href"));
+                });
+            });
+
+            // Efecto hover para el botón CTA
+            const ctaButton = document.querySelector(".cta-button");
+            if (ctaButton) {
+                ctaButton.addEventListener("mouseenter", () => {
+                    ctaButton.classList.add("jello");
+                });
+
+                ctaButton.addEventListener("mouseleave", () => {
+                    ctaButton.classList.remove("jello");
+                });
+            }
+            
+            // Crear elementos de galaxia adicionales
+            createRandomStars();
+            createRandomSupernovas();
+        });
+        
+        // Función para crear estrellas aleatorias
+        function createRandomStars() {
+            const container = document.body;
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Tamaño aleatorio
+                const size = Math.random() * 3;
+                if (size < 1) {
+                    star.classList.add('star-small');
+                } else if (size < 2) {
+                    star.classList.add('star-medium');
+                } else {
+                    star.classList.add('star-large');
+                }
+                
+                // Posición aleatoria
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                
+                star.style.left = `${x}px`;
+                star.style.top = `${y}px`;
+                
+                // Animación con retraso aleatorio
+                star.style.animationDelay = `${Math.random() * 4}s`;
+                
+                container.appendChild(star);
+            }
+        }
+        
+        // Función para crear supernovas aleatorias
+        function createRandomSupernovas() {
+            setInterval(() => {
+                const container = document.body;
+                const supernova = document.createElement('div');
+                supernova.classList.add('supernova');
+                
+                // Posición aleatoria
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                
+                supernova.style.left = `${x}px`;
+                supernova.style.top = `${y}px`;
+                
+                container.appendChild(supernova);
+                
+                // Eliminar después de la animación
+                setTimeout(() => {
+                    supernova.remove();
+                }, 10000);
+            }, 15000);
+        }
+    </script>
+</body>
+</html>
