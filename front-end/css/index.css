@@ -408,6 +408,280 @@
     border-radius: 50%;
     animation: ufoLight 2s infinite;
   }
+
+.hero-content strong {
+  display: inline-block; /* necesario para aplicar padding y borde correctamente */
+  border: 1px solid white;
+  padding: 0.25em 0.6em;
+  border-radius: 30px;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  line-height: 1.2; /* pequeño ajuste para evitar que se vea cortado */
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap; /* evita que palabras muy cortas se partan */
+}
+
+.hero-content strong:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #e0e0e0;
+}
+
+
+/* === Responsividad Mejorada para Hero, Logo, Navegación y Texto === */
+
+@media (max-width: 1024px) {
+  /* Para tablets y pantallas medianas */
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding: 3rem 4%;
+    height: auto;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 12px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+
+  .cta-button {
+    font-size: 17px;
+    padding: 14px 28px;
+    margin: 0 auto;
+  }
+
+  .logo-image-container {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .logo-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Para móviles grandes y tablets pequeñas */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding: 2rem 3%;
+    height: auto;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 12px 26px;
+    margin: 0 auto;
+  }
+
+  .logo-image-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .logo-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para móviles pequeños */
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 4%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding: 1.5rem 4%;
+    gap: 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .cta-button {
+    font-size: 15px;
+    padding: 10px 22px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .logo-image-container {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .logo-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+}
+
+
+/* === Responsividad para navegación === */
+
+@media (max-width: 1024px) {
+  /* Tablets y pantallas medianas */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Móviles grandes y tablets pequeñas */
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Móviles pequeños */
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1rem;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .logo-image {
+    max-width: 250px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
   
   @keyframes flyUfo {
     0% {
