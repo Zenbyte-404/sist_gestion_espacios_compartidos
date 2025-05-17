@@ -1,3 +1,4 @@
+/*asterisco universal uwu*/
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@
     position: relative;
   }
   
+  /*aca puse las particulas de los ovnis uwu*/
   #particles-js {
     position: absolute;
     width: 100%;
@@ -23,7 +25,7 @@
     background: radial-gradient(ellipse at center, #0a0e2a 0%, var(--color-bg) 70%);
   }
   
-  /* === Layout === */
+
   .container {
     width: 100%;
     min-height: 100vh;
@@ -58,7 +60,7 @@
     text-shadow: 0 0 10px var(--color-glow);
   }
   
-  /* === Nav con variantes de colores === */
+ 
   nav ul {
     display: flex;
     list-style: none;
@@ -74,7 +76,7 @@
     transition: all 0.3s;
   }
   
-  /* Variantes de colores para navegación */
+  
   .nav-link-purple {
     color: var(--color-primary);
   }
@@ -129,7 +131,7 @@
     width: 100%;
   }
   
-  /* === Hero === */
+
   .hero-container {
     display: flex;
     align-items: center;
@@ -145,13 +147,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px; /* Reducido de 20px a 10px para juntar más los textos */
+    gap: 10px;
   }
   
   .text-group {
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Espacio reducido entre párrafos */
+    gap: 8px; 
   }
   
   .hero-title {
@@ -167,7 +169,7 @@
   .hero-subtitle {
     font-size: 18px;
     color: var(--color-subtext);
-    line-height: 1.4; /* Reducido de 1.5 para juntar más el texto */
+    line-height: 1.4; 
   }
   
   .cta-button {
@@ -206,7 +208,7 @@
     left: 100%;
   }
   
-  /* === Logo image with glow === */
+  
   .logo-image-container {
     position: relative;
   }
@@ -229,7 +231,7 @@
     z-index: 1;
   }
   
-  /* === Nuevas animaciones === */
+  
   .animate-fade-in {
     animation: fadeIn 1.2s ease-in-out both;
   }
@@ -296,7 +298,7 @@
     }
   }
   
-  /* === Animations === */
+
   @keyframes flicker {
     0%,
     100% {
@@ -341,7 +343,7 @@
     }
   }
   
-  /* === Extras: Star, UFO, Nebula === */
+  
   .star {
     position: absolute;
     background-color: var(--color-primary);
@@ -410,16 +412,16 @@
   }
 
 .hero-content strong {
-  display: inline-block; /* necesario para aplicar padding y borde correctamente */
+  display: inline-block; 
   border: 1px solid white;
   padding: 0.25em 0.6em;
   border-radius: 30px;
   background-color: transparent;
   color: white;
   font-weight: 600;
-  line-height: 1.2; /* pequeño ajuste para evitar que se vea cortado */
+  line-height: 1.2;
   transition: all 0.2s ease-in-out;
-  white-space: nowrap; /* evita que palabras muy cortas se partan */
+  white-space: nowrap; 
 }
 
 .hero-content strong:hover {
@@ -428,10 +430,8 @@
 }
 
 
-/* === Responsividad Mejorada para Hero, Logo, Navegación y Texto === */
 
 @media (max-width: 1024px) {
-  /* Para tablets y pantallas medianas */
   header {
     flex-direction: column;
     align-items: center;
@@ -489,7 +489,6 @@
 }
 
 @media (max-width: 768px) {
-  /* Para móviles grandes y tablets pequeñas */
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -551,7 +550,6 @@
 }
 
 @media (max-width: 480px) {
-  /* Para móviles pequeños */
   header {
     flex-direction: column;
     align-items: center;
@@ -613,10 +611,9 @@
 }
 
 
-/* === Responsividad para navegación === */
+
 
 @media (max-width: 1024px) {
-  /* Tablets y pantallas medianas */
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
@@ -625,7 +622,6 @@
 }
 
 @media (max-width: 768px) {
-  /* Móviles grandes y tablets pequeñas */
   nav ul {
     flex-direction: column;
     gap: 15px;
@@ -639,7 +635,6 @@
 }
 
 @media (max-width: 480px) {
-  /* Móviles pequeños */
   nav ul {
     flex-direction: column;
     gap: 12px;
@@ -720,7 +715,7 @@
     }
   }
   
-  /* === Responsive === */
+ 
   @media (max-width: 768px) {
     header {
       flex-direction: column;
@@ -756,7 +751,7 @@
     }
   }
   
-  /* Estilos adicionales para Bootstrap */
+ 
   h3 {
     color: var(--color-primary);
     font-size: 24px;
@@ -764,7 +759,7 @@
   }
   
   .hero-content p {
-    margin-bottom: 8px; /* Reducido de 15px a 8px */
+    margin-bottom: 8px;
   }
   
   .hero-content i {
