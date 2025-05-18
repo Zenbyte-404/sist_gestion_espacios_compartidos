@@ -702,6 +702,11 @@
       transform: rotate(10deg);
     }
   }
+
+  #particles-js {
+  background-attachment: fixed;
+}
+
   
   @keyframes ufoLight {
     0%,

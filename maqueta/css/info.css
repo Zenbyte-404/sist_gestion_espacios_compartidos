@@ -147,3 +147,10 @@ main {
         clip-path: none;
     }
 }
+.hero-content p {
+    font-size: 20px;
+}
+.hero-content ul {
+    padding: 5px;
+    font-size: 20px;
+}
