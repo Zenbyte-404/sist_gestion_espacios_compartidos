@@ -5,39 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login de Usuario</title>
   <link rel="stylesheet" href="css/login.css" />
+  <!-- Si usas FontAwesome para el ícono de login -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <style>
+    .header-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+    .header-nav ul {
+      display: flex;
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .header-nav a {
+      text-decoration: none;
+      transition: box-shadow 0.2s;
+    }
+    .header-nav a:hover {
+      box-shadow: 0 2px 8px rgba(54,209,196,0.15);
+    }
+  </style>
 </head>
 <body>
-
-  <header class="logo-header">
-    <div class="logo">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="3"
-          y="4"
-          width="18"
-          height="18"
-          rx="2"
-          stroke="white"
-          stroke-width="2"
-        />
-        <path d="M3 10H21" stroke="white" stroke-width="2" />
-        <path d="M9 2L9 6" stroke="white" stroke-width="2" stroke-linecap="round" />
-        <path d="M15 2L15 6" stroke="white" stroke-width="2" stroke-linecap="round" />
-        <path
-          d="M9 14L11 16L15 12"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <h1 class="logo-text">ReservaYa</h1>
-    </div>
-  </header>
+<header class="logo-header" style="display: flex; align-items: center; justify-content: space-between; padding: 0 32px; margin-top: 16px; margin-bottom: 32px;">
+  <div class="logo" style="display: flex; align-items: center;">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style="height: 40px; width: 40px; margin-right: 12px;"
+    >
+      <rect
+        x="3"
+        y="4"
+        width="18"
+        height="18"
+        rx="2"
+        stroke="white"
+        stroke-width="2"
+      />
+      <path d="M3 10H21" stroke="white" stroke-width="2" />
+      <path d="M9 2L9 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+      <path d="M15 2L15 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+      <path
+        d="M9 14L11 16L15 12"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <h1 class="logo-text" style="color: #fff; font-size: 1.7rem; margin: 0;">ReservaYa</h1>
+  </div>
+  <!-- Nav a la derecha -->
+  <nav aria-label="Menú principal" class="header-nav" style="margin: 0;">
+    <ul>
+      <li>
+        <a href="index.html" class="nav-link nav-glow slide-down delay-100" aria-current="page" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="quienes_somos.html" class="nav-link nav-glow slide-down delay-200" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
+          Quiénes somos
+        </a>
+      </li>
+      <li>
+        <a href="objetivo.html" class="nav-link nav-glow slide-down delay-200" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
+          Objetivo
+        </a>
+      </li>
+      <li>
+        <a href="login.html" class="nav-link-green nav-glow slide-down delay-400" style="background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%); color: #fff; border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
+          <i class="fas fa-sign-in-alt" aria-hidden="true" style="margin-right: 8px;"></i>
+          <span style="background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%); color: #fff; border-radius: 8px; padding: 0 4px;">Login</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
   <div class="login-container">
     <h2>Iniciar Sesión</h2>
@@ -70,5 +120,3 @@
 
 </body>
 </html>
-
-

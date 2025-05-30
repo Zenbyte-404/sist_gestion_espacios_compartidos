@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
-    <title>dashboard</title>
-    <link rel="stylesheet" href="css/index.css" />
-=======
     <title>ReservaYa - Sistema de Reservas 2025</title>
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/info.css" />
     <link rel="stylesheet" href="css/gestion_datos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,85 +13,74 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
->>>>>>> Agustin-Gibaut
   </head>
   <body>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <header>
       <div class="logo">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon-spin"
-        >
-          <rect
-            x="3"
-            y="4"
-            width="18"
-            height="18"
-            rx="2"
-            stroke="white"
-            stroke-width="2"
-          />
-          <path d="M3 10H21" stroke="white" stroke-width="2" />
-<<<<<<< HEAD
-          <path d="M9 2L9 6" stroke="white" stroke-width="2" stroke-linecap="round" />
-          <path d="M15 2L15 6" stroke="white" stroke-width="2" stroke-linecap="round" />
-=======
-          <path
-            d="M9 2L9 6"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M15 2L15 6"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
->>>>>>> Agustin-Gibaut
-          <path
-            d="M9 14L11 16L15 12"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <h1 class="logo-text text-gradient">Reservita</h1>
+      <svg
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon-spin"
+      >
+        <rect
+        x="3"
+        y="4"
+        width="18"
+        height="18"
+        rx="2"
+        stroke="white"
+        stroke-width="2"
+        />
+        <path d="M3 10H21" stroke="white" stroke-width="2" />
+        <path d="M9 2L9 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+        <path d="M15 2L15 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+        <path
+        d="M9 14L11 16L15 12"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        />
+      </svg>
+      <h1 class="logo-text text-gradient">ReservaYa</h1>
       </div>
-      <nav>
-        <ul>
-<<<<<<< HEAD
-          <li>
-            <a href="index.html" class="nav-link-purple nav-glow slide-down delay-100"
-              >Inicio</a
-            >
-          </li>
-          <li>
-            <a
-              href="quienes_somos.html"
-              class="nav-link-blue nav-glow slide-down delay-200"
-              >Quienes somos</a
-            >
-          </li>
-          <li>
-            <a href="login.html" class="nav-link-green nav-glow slide-down delay-400"
-              >Ingresar</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-=======
-          <li><a href="index.html" class="nav-link-purple">Inicio</a></li>
-          <li><a href="quienes_somos.html" class="nav-link-blue">Quiénes somos</a></li>
-          <li><a href="" id="persona-icono" ><img src="./imagenes/person_icon.svg" alt="persona-icono"></a></li>
-          <li><a class="nav-link-green" >Juan</a></li>
-        </ul>
+      <nav class="nav-minimal">
+      <ul>
+        <li>
+        <a href="index.html" class="nav-link nav-glow">
+          <span class="nav-icon">
+          <i class="fa-solid fa-house"></i>
+          </span>
+          <span class="nav-label">Inicio</span>
+        </a>
+        </li>
+        <li>
+        <a href="quienes_somos.html" class="nav-link nav-glow">
+          <span class="nav-icon">
+          <i class="fa-solid fa-circle-info"></i>
+          </span>
+          <span class="nav-label">Quiénes somos</span>
+        </a>
+        </li>
+        <li>
+        <a href="gestion_datos.html" class="nav-link nav-glow active">
+          <span class="nav-icon">
+          <i class="fa-solid fa-calendar-days"></i>
+          </span>
+          <span class="nav-label">Mis Reservas</span>
+        </a>
+        </li>
+      </ul>
+      <div class="nav-profile" style="filter: grayscale(100%);">
+        <span class="nav-user-name" style="color: #222; font-weight: 600;">Juan</span>
+        <a href="login.html" class="nav-link nav-logout" title="Salir" style="display:none;"></a>
+      </div>
       </nav>
     </header>
 
@@ -169,10 +155,24 @@
                 <button class="btn-cancelar">Cancelar</button>
               </td>
             </tr>
+            <!-- Nueva reserva agregada -->
+            <tr>
+              <td>Sala de Reuniones 2</td>
+              <td>Reunión</td>
+              <td>30/05/2025</td>
+              <td>15:00 - 17:00</td>
+              <td>Edificio Norte</td>
+              <td>
+                <button class="btn-modificar">Modificar</button>
+                <button class="btn-cancelar">Cancelar</button>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
+      <div class="acciones-extra">
+        <button class="btn-nueva-reserva">Nueva Reserva</button>
+      </div>
     </section>
->>>>>>> Agustin-Gibaut
   </body>
 </html>

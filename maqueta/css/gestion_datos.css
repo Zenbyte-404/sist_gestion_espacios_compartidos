@@ -1,110 +1,168 @@
-
-h2{
+h2 {
     margin-left: 20px;
-}
-table {
-    margin: 5rem auto;
-    border-collapse: collapse;
-    width: 90%;
-    max-width: 800px;
-    background-color: #1c2046; 
     color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: #181b36;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin: 3rem auto;
+    border-collapse: collapse;
+    width: 95%;
+    max-width: 900px;
+    background-color: #23265a;
+    color: #ffffff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
     overflow: hidden;
 }
 
 th, td {
-    border: 1px solid #3b3f72;
-    padding: 12px;
+    border: 1px solid #35386b;
+    padding: 14px 10px;
     text-align: left;
+    vertical-align: middle;
 }
 
 th {
     background-color: #2c2f59;
     color: #ffffff;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
+tr:nth-child(even) {
+    background-color: #20234a;
+}
+
+tr:hover {
+    background-color: #282b5c;
+    transition: background 0.2s;
+}
 
 .disponible {
-    background-color: #2ecc71; 
-    color: white;
+    background-color: #27ae60;
+    color: #fff;
     font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
 }
 
 .no-disponible {
-    background-color: #e74c3c; 
-    color: white;
+    background-color: #e74c3c;
+    color: #fff;
     font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
 }
 
-
 .filtros {
-    margin: 20px auto;
+    margin: 24px auto 18px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
+    background: #23265a;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    width: fit-content;
 }
 
 .filtros label {
-    font-weight: 500;
+    font-weight: 600;
     color: #ffffff;
+    margin-right: 6px;
 }
 
 .filtros select {
-    padding: 6px 12px;
+    padding: 7px 14px;
     border-radius: 5px;
     border: 1px solid #444868;
     background-color: #1c2046;
     color: white;
     font-family: 'Inter', sans-serif;
+    font-size: 1rem;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    table {
-        font-size: 14px;
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    .filtros {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 .btn-modificar,
 .btn-cancelar {
-  padding: 6px 12px;
-  margin-right: 6px;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+    padding: 7px 16px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(44,47,89,0.12);
 }
 
 .btn-modificar {
-  background-color: #3498db;
-  color: white;
+    background-color: #3498db;
+    color: white;
 }
 .btn-modificar:hover {
-  background-color: #2980b9;
+    background-color: #217dbb;
 }
 
 .btn-cancelar {
-  background-color: #e74c3c;
-  color: white;
+    background-color: #e74c3c;
+    color: white;
 }
 .btn-cancelar:hover {
-  background-color: #c0392b;
+    background-color: #c0392b;
 }
 
-.icono{
-    background-color: rgb(251, 253, 255);
+.icono {
+    background-color: #f7faff;
+    border-radius: 50%;
+    padding: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(44,47,89,0.08);
+}
+
+@media (max-width: 800px) {
+    table {
+        font-size: 15px;
+        width: 98%;
+    }
+    .filtros {
+        flex-direction: column;
+        align-items: stretch;
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 13px;
+        margin: 1.5rem auto;
+    }
+    th, td {
+        padding: 8px 4px;
+    }
+    .filtros {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.7rem;
+        width: 98%;
+        padding: 8px;
+    }
+    h2 {
+        font-size: 1.3rem;
+        margin-left: 10px;
+    }
 }
