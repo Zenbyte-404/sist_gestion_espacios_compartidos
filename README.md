@@ -1,6 +1,10 @@
 # 💻 Zenbyte-404 — Sistema de Gestión de Espacios Compartidos.
 
 
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=4ECDC4&center=true&vCenter=true&width=800&lines=💫+¡Bienvenido+a+nuestro+repositorio!;Desarrollamos+desde+Córdoba;🚀+Creando+el+futuro+con+código;✨+creado+con+amor+Zenbyte-404;🎯+Construyendo+experiencias+increíbles" alt="Typing SVG"/>
+</div>
+
 ## 🚀 Descripción.
 
 **Zenbyte-404** es un sistema web para la gestión de **espacios compartidos** como salas de estudio, laboratorios y coworkings. Desarrollado utilizando **HTML**, **CSS** y **Bootstrap**, permite visualizar una maqueta interactiva del sistema que simula su funcionamiento.
