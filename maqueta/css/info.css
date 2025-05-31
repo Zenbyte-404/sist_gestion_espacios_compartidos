@@ -6,9 +6,10 @@
 }
 
 body {
-    background-color: #050e2a;
-    color: white;
-    min-height: 100vh;
+    background-color: #050e2a ;
+    color: white ;
+    min-height: 100vh ;
+    
 }
 
 .container {
