@@ -4,225 +4,176 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservita</title>
-    <title>Reservita - Sistema de Reservas 2025</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="description" content="Reservita es el sistema de reservas 2025. Reserva espacios de forma rápida, sencilla e intuitiva. Encuentra y reserva tu espacio ideal en tiempo real." />
+    <meta name="keywords" content="reservas, espacios, sistema de reservas, reservar, plataforma, online, 2025, Reservita" />
+    <meta name="author" content="Reservita" />
+    <link rel="canonical" href="https://tusitio.com/index.html" />
+    <link rel="icon" href="imagenes/logo.jpeg" type="image/jpeg" />
+    <link rel="preload" as="image" href="imagenes/logo.jpeg" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/galaxy.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta property="og:title" content="Reservita | Sistema de Reservas 2025" />
+    <meta property="og:description" content="Reserva espacios de forma rápida, sencilla e intuitiva con Reservita." />
+    <meta property="og:image" content="imagenes/logo.jpeg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tusitio.com/index.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Reservita | Sistema de Reservas 2025" />
+    <meta name="twitter:description" content="Reserva espacios de forma rápida, sencilla e intuitiva con Reservita." />
+    <meta name="twitter:image" content="imagenes/logo.jpeg" />
+    
   </head>
   <body>
-    <!-- Contenedor de partículas -->
-    <div id="particles-js"></div>
-
-    <!-- Contenedor de OVNI -->
-    <div class="ufo">
+    <div id="particles-js" aria-hidden="true"></div>
+    <div class="ufo" aria-hidden="true">
       <div class="ufo-body"></div>
       <div class="ufo-dome"></div>
       <div class="ufo-light"></div>
     </div>
-
     <div class="container">
-      <header>
-        <div class="logo">
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon-spin"
-          >
-            <rect
-              x="3"
-              y="4"
-              width="18"
-              height="18"
-              rx="2"
-              stroke="white"
-              stroke-width="2"
-            />
-            <path d="M3 10H21" stroke="white" stroke-width="2" />
-            <path d="M9 2L9 6" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M15 2L15 6" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path
-              d="M9 14L11 16L15 12"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <h1 class="logo-text text-gradient">Reservita</h1>
+      <header class="py-3" role="banner">
+        <div class="header-flex">
+          <!-- Logo a la izquierda -->
+          <div class="header-logo">
+            <a href="index.html" aria-label="Reservita - Inicio">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-spin"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect
+                  x="3"
+                  y="4"
+                  width="18"
+                  height="18"
+                  rx="2"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path d="M3 10H21" stroke="white" stroke-width="2" />
+                <path d="M9 2L9 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path d="M15 2L15 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path
+                  d="M9 14L11 16L15 12"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <span class="logo-text text-gradient mb-0 fs-3">Reservita</span>
+            </div>
+            <!-- Nav centrado -->
+            <nav aria-label="Menú principal" class="header-nav">
+            <ul class="list-unstyled">
+                <li>
+                <a href="index.html" class="nav-link nav-glow slide-down delay-100" aria-current="page" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
+                Inicio
+                </a>
+                </li>
+                <li>
+                <a href="quienes_somos.html" class="nav-link nav-glow slide-down delay-200" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
+                Quiénes somos
+                </a>
+                </li>
+                <li>
+                <a href="objetivo.html" class="nav-link nav-glow slide-down delay-200" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
+                Objetivo
+                </a>
+                </li>
+              <a href="login.html" class="nav-link-green nav-glow slide-down delay-400" style="background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%); color: #fff; border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
+              <i class="fas fa-sign-in-alt" aria-hidden="true" style="margin-right: 8px;"></i>
+              <span style="background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%); color: #fff; border-radius: 8px; padding: 0 4px;">Login</span>
+              </a>
+              </li>
+            </ul>
+            </nav>
+          <!-- Redes sociales a la derecha -->
+          <nav aria-label="Redes sociales" class="header-social">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-light fs-4">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="text-light fs-4">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp" class="text-light fs-4">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="text-light fs-4">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html" class="nav-link-purple nav-glow slide-down delay-100">Inicio</a>
-            </li>
-            <li>
-              <a
-                href="quienes_somos.html"
-                class="nav-link-blue nav-glow slide-down delay-200">Quienes somos</a>
-            </li>
-             <li>
-             <a
-                href="objetivo.html"
-                class="nav-link-blue nav-glow slide-down delay-200">Objetivo</a>
-            </li>
-            <li>
-              <a href="login.html" class="nav-link-green nav-glow slide-down delay-400">Ingresar</a>
-            </li>
-          </ul>
-        </nav>
       </header>
-      <main class="hero-container row">
-     <!-- Texto e íconos a la izquierda -->
-        <div class="hero-content col-md-6">
-          <h2 class="hero-title blur-in">
-            <i class="fas fa-rocket icon-bounce"></i> <strong>Bienvenido</strong> a Reservita
-          </h2>
-          <h3 class="mt-2 mb-3 slide-up delay-300">Sistema de <strong>Reservas 2025</strong></h3>
+      <main class="hero-container row align-items-center flex-lg-row flex-column-reverse">
+        <section class="hero-content col-lg-6 col-12" itemscope itemtype="https://schema.org/WebSite">
+          <h1 class="hero-title blur-in fs-2" itemprop="name">
+            <i class="fas fa-rocket icon-bounce" aria-hidden="true"></i>
+            Bienvenido a Reservita
+          </h1>
+       
+          <h2 class="mt-2 mb-3 slide-up delay-300 fs-4" itemprop="description">Sistema de Reservas 2025</h2>
           <div class="text-group">
             <p class="hero-subtitle mb-2 slide-left delay-400">
-              <i class="fas fa-calendar-check icon-pulse"></i> El sistema más <strong>rápido</strong> y
-              <strong>sencillo</strong> para reservar tu espacio ideal
+              <i class="fas fa-calendar-check icon-pulse" aria-hidden="true"></i>
+              El sistema más rápido y sencillo para reservar tu espacio ideal
             </p>
             <p class="hero-subtitle mb-2 slide-left delay-500">
-              <i class="fas fa-map-marker-alt icon-shake"></i> <strong>Encuentra</strong> y <strong>reserva</strong>
-              espacios en <strong>tiempo real</strong> con nuestra plataforma intuitiva
+              <i class="fas fa-map-marker-alt icon-shake" aria-hidden="true"></i>
+              Encuentra y reserva espacios en tiempo real con nuestra plataforma intuitiva
             </p>
             <p class="hero-subtitle mb-3 slide-left delay-600">
-              <i class="fas fa-star star-twinkle"></i> Disfruta de una <strong>experiencia de usuario</strong> excepcional
-              con nuestras <strong>funciones avanzadas</strong>
+              <i class="fas fa-star star-twinkle" aria-hidden="true"></i>
+              Disfruta de una experiencia de usuario excepcional con nuestras funciones avanzadas
             </p>
           </div>
-          <button class="cta-button btn-pulse delay-700 shadow-pulse">
-            <i class="fas fa-search icon-bounce"></i> Explorar ahora
-          </button>
-        </div>
-
-
-        <!-- Logo a la derecha con destellos -->
-        <div
-          class="logo-image-container col-md-6 d-flex justify-content-center align-items-center float"
-        >
-          <div class="logo-glow nebula-pulse"></div>
+          <a href="login.html" class="cta-button btn-pulse delay-700 shadow-pulse btn btn-primary mt-3" aria-label="Explorar ahora">
+            <i class="fas fa-search icon-bounce" aria-hidden="true"></i> Explorar ahora
+          </a>
+        </section>
+        <aside class="logo-image-container col-lg-6 col-12 d-flex justify-content-center align-items-center float" aria-label="Logo Reservita">
+          <div class="logo-glow nebula-pulse" aria-hidden="true"></div>
           <img
             src="imagenes/logo.jpeg"
             alt="Logo Reservita"
             class="logo-image zoom-in delay-200"
+            width="240"
+            height="240"
+            loading="lazy"
+            decoding="async"
+            itemprop="image"
           />
-        </div>
+        </aside>
       </main>
+      <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <footer class="text-center py-4 mt-5" role="contentinfo" style="color: #fff;">
+        <small>&copy; 2025 Reservita. Hecho con <span aria-label="amor" role="img">❤️</span> por Reservita.</small>
+      </footer>
     </div>
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script de Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <!-- Scripts personalizados -->
-    <script src="js/galaxy-particles.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Añadir efecto de desplazamiento suave a los enlaces de navegación
-       /*  
-       ESTO INHIBE LA FUNCION NORMAL DE LOS ENLACES
-       document.querySelectorAll("nav a").forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            console.log("Navegando a:", this.getAttribute("href"));
-          });
-        }); */
-
-        // Efecto hover para el botón CTA
-        const ctaButton = document.querySelector(".cta-button");
-        if (ctaButton) {
-          ctaButton.addEventListener("mouseenter", () => {
-            ctaButton.classList.add("jello");
-          });
-
-          ctaButton.addEventListener("mouseleave", () => {
-            ctaButton.classList.remove("jello");
-          });
-        }
-
-        // Crear elementos de galaxia adicionales
-        createRandomStars();
-        createRandomSupernovas();
-      });
-
-      // Función para crear estrellas aleatorias
-      function createRandomStars() {
-        const container = document.body;
-        const starCount = 100;
-
-        for (let i = 0; i < starCount; i++) {
-          const star = document.createElement("div");
-          star.classList.add("star");
-
-          // Tamaño aleatorio
-          const size = Math.random() * 3;
-          if (size < 1) {
-            star.classList.add("star-small");
-          } else if (size < 2) {
-            star.classList.add("star-medium");
-          } else {
-            star.classList.add("star-large");
-          }
-
-          // Posición aleatoria
-          const x = Math.random() * window.innerWidth;
-          const y = Math.random() * window.innerHeight;
-
-          star.style.left = `${x}px`;
-          star.style.top = `${y}px`;
-
-          // Animación con retraso aleatorio
-          star.style.animationDelay = `${Math.random() * 4}s`;
-
-          container.appendChild(star);
-        }
-      }
-
-      // Función para crear supernovas aleatorias
-      function createRandomSupernovas() {
-        setInterval(() => {
-          const container = document.body;
-          const supernova = document.createElement("div");
-          supernova.classList.add("supernova");
-
-          // Posición aleatoria
-          const x = Math.random() * window.innerWidth;
-          const y = Math.random() * window.innerHeight;
-
-          supernova.style.left = `${x}px`;
-          supernova.style.top = `${y}px`;
-
-          container.appendChild(supernova);
-
-          // Eliminar después de la animación
-          setTimeout(() => {
-            supernova.remove();
-          }, 10000);
-        }, 15000);
-      }
-    </script>
   </body>
 </html>
