@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agustin Gibaut</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%2300bcd4'/><text x='50%' y='55%' text-anchor='middle' font-size='38' font-family='monospace' fill='white' dy='.1em'>A</text></svg>">
+    <link rel="stylesheet" href="Agustin.css">
+      <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<div id="loading-message" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;transition:opacity 0.7s;flex-direction:column;">
+    <span id="loading-text" style="font-family:monospace;font-size:1.3rem;">
+        "La 
+        <strong style="border:2.5px solid #a259ff; border-radius:18px; padding:2px 10px;">inteligencia</strong> 
+        es la habilidad de evitar hacer 
+        <strong style="border:2.5px solid #a259ff; border-radius:18px; padding:2px 10px;">trabajo,</strong> 
+        y conseguir que el trabajo 
+        <strong style="border:2.5px solid #a259ff; border-radius:18px; padding:2px 10px;">se haga."</strong>
+    </span>
+    <div id="loading-dots" style="display:flex; width:70px; margin-top:2.2rem; justify-content:center; align-items:center; gap:0.7em;">
+        <span class="dot" style="opacity:0.3; font-size:2.2rem; transition:opacity 0.3s;">•</span>
+        <span class="dot" style="opacity:0.3; font-size:2.2rem; transition:opacity 0.3s;">•</span>
+        <span class="dot" style="opacity:0.3; font-size:2.2rem; transition:opacity 0.3s;">•</span>
+    </div>
+</div>
+<!-- Chatbot IA estilo terminal -->
+<div id="chatbot-container" style="position:fixed;bottom:30px;right:30px;z-index:10000;">
+    <button id="chatbot-toggle" style="all:unset;cursor:pointer;position:relative;">
+        <span style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:#232323;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.18);">
+            <i class="fas fa-robot" style="color:#a259ff;font-size:2rem;text-shadow:0 2px 8px #fff2,0 0 0 #00bcd4;"></i>
+        </span>
+    </button>
+    <div id="chatbot-window" style="display:none;width:340px;max-width:90vw;height:420px;background:#181818;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,0.22);overflow:hidden;flex-direction:column;border:2px solid #a259ff;">
+        <div style="background:#232323;color:#a259ff;padding:0.7rem 1rem;font-family:monospace;font-size:1.1rem;display:flex;align-items:center;gap:0.7em;">
+            <i class="fas fa-terminal"></i> asistente de Agustin
+        </div>
+        <div id="chatbot-messages" style="flex:1;padding:1rem;overflow-y:auto;background:#181818;font-family:monospace;font-size:1rem;color:#eee;display:flex;flex-direction:column;gap:0.7em;"></div>
+        <form id="chatbot-form" style="display:flex;border-top:1px solid #333;background:#181818;">
+            <span style="color:#a259ff;font-family:monospace;padding:0.7rem 0 0.7rem 0.7rem;">$</span>
+            <input id="chatbot-input" type="text" autocomplete="off" placeholder="Escribe 1, 2, 3, 4 o una pregunta..." style="flex:1;padding:0.7rem 1rem;background:#181818;color:#fff;border:none;font-family:monospace;font-size:1rem;outline:none;">
+            <button type="submit" style="background:#232323;border:none;color:#a259ff;padding:0 1.2rem;font-size:1.2rem;cursor:pointer;"><i class="fas fa-arrow-right"></i></button>
+        </form>
+    </div>
+</div>
+<audio id="chatbot-sound" src="#playlestgoo Sonido de tono mensaje 3efecto de sonido (popular) play sound gaming.mp3" preload="auto"></audio>
+
+
+
+            <!-- Nueva terminal de contacto -->
+            <div class="git-terminal-window mt-4">
+                <div class="terminal-titlebar">
+                    <div class="terminal-controls">
+                        <div class="control-btn close"></div>
+                        <div class="control-btn minimize"></div>
+                        <div class="control-btn maximize"></div>
+                    </div>
+                    <div class="terminal-title">contactactate conmigo</div>
+                    <div class="terminal-menu">
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-header-info">
+                        <div class="terminal-user">Agustin-Gibaut@DESKTOP-PROJECT MINGW64 ~/contact</div>
+                    </div>
+                  
+                    <div class="terminal-session">
+                        <div class="terminal-contact-list">
+                            <div class="mb-2">
+                                <i class="fab fa-whatsapp me-2 text-success"></i>
+                                <a href="https://wa.me/3512580435" target="_blank" class="text-decoration-none text-reset">WhatsApp: 3512580435</a>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fab fa-github me-2"></i>
+                                <a href="https://github.com/AgustinGibaut" target="_blank" class="text-decoration-none text-reset">GitHub: AgustinGibaut</a>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fas fa-envelope me-2"></i>
+                                <a href="mailto:agusgibaut693@gmail.com" class="text-decoration-none text-reset">Gmail: agusgibaut693@gmail.com</a>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fab fa-linkedin me-2 text-primary"></i>
+                                <a href="https://www.linkedin.com/in/agustin-gibaut-61baa5327/" target="_blank" class="text-decoration-none text-reset">LinkedIn: agustin-gibaut</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt-full">Agustin-Gibaut@DESKTOP-PROJECT MINGW64 ~/contact</span>
+                        <span class="terminal-cursor">█</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección Sobre Mí -->
+            <div class="git-terminal-window mt-4">
+                <div class="terminal-titlebar">
+                    <div class="terminal-controls">
+                        <div class="control-btn close"></div>
+                        <div class="control-btn minimize"></div>
+                        <div class="control-btn maximize"></div>
+                    </div>
+                    <div class="terminal-title">sobre mí</div>
+                    <div class="terminal-menu">
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-header-info">
+                        <div class="terminal-user">Agustin-Gibaut@DESKTOP-PROJECT MINGW64 ~/about</div>
+                    </div>
+                    <div class="terminal-session">
+                        <div class="terminal-about-section mb-3" style="display: flex; align-items: center; gap: 2rem;">
+                            <div style="flex: 1;">
+                                <p>
+                                    ¡Hola! Soy Agustin Gibaut, Estudiante de desarrollado de software apasionado por la tecnología y el aprendizaje constante. Me especializo en crear soluciones modernas y eficientes, combinando creatividad y lógica para lograr resultados de calidad. Disfruto trabajar en proyectos desafiantes y colaborar en equipos multidisciplinarios.
+                                </p>
+                                <p>
+                                    Siempre busco mejorar mis habilidades y mantenerme actualizado con las últimas tendencias del desarrollo. Si quieres saber más sobre mi trabajo o colaborar en algún proyecto, ¡no dudes en contactarme!
+                                </p>
+                            </div>
+                            <div style="flex-shrink: 0;">
+                                <img src="167491736.jpg" alt="Foto de Agustin Gibaut" style="width:130px;height:130px;object-fit:cover;border-radius:50%;box-shadow:0 2px 12px rgba(0,0,0,0.15);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt-full">Agustin-Gibaut@DESKTOP-PROJECT MINGW64 ~/about</span>
+                        <span class="terminal-cursor">█</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección de Skills -->
+            <div class="git-terminal-window mt-4">
+                <div class="terminal-titlebar">
+                    <div class="terminal-controls">
+                        <div class="control-btn close"></div>
+                        <div class="control-btn minimize"></div>
+                        <div class="control-btn maximize"></div>
+                    </div>
+                    <div class="terminal-title">skills</div>
+                    <div class="terminal-menu">
+                        <i class="bi bi-three-dots"></i>
+                    </div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-header-info">
+                        <div class="terminal-user">Agustin-Gibaut@DESKTOP-PROJECT MINGW64 ~/skills</div>
+                    </div>
+                    <div class="terminal-session">
+                        <div class="terminal-skill-section mb-3">
+                            <strong>Front-end</strong>
+                            <ul class="terminal-skill-list">
+                                <li><i class="bi bi-code-slash me-2"></i>HTML5</li>
+                                <li><i class="bi bi-filetype-css me-2"></i>CSS</li>
+                                <li><i class="bi bi-filetype-js me-2"></i>JavaScript</li>
+                                <li><i class="bi bi-bootstrap me-2"></i>Bootstrap</li>
+                            </ul>
+                        </div>
+                        <div class="terminal-skill-section mb-3">
+                            <strong>Back-end</strong>
+                            <ul class="terminal-skill-list">
+                                <li><i class="bi bi-filetype-py me-2"></i>Python</li>
+                                <li><i class="bi bi-filetype-java me-2"></i>Django</li>
+                            </ul>
+                        </div>
+                        <div class="terminal-skill-section">
+                            <strong>Herramientas</strong>
+                            <ul class="terminal-skill-list">
+                                <li><i class="bi bi-git me-2"></i>Git</li>
+                                <li><i class="bi bi-github me-2"></i>GitHub</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt-full">Agustin-Gibaut@DESKTOP-PROJECT MINGW64 ~/skills</span>
+                        <span class="terminal-cursor">█</span>
+                    </div>
+                </div>
+            </div>
+
+         <!-- Sección de Proyectos -->
+<div class="git-terminal-window mt-4">
+    <div class="terminal-titlebar">
+        <div class="terminal-controls">
+            <div class="control-btn close"></div>
+            <div class="control-btn minimize"></div>
+            <div class="control-btn maximize"></div>
+        </div>
+        <div class="terminal-title">proyectos</div>
+        <div class="terminal-menu">
+            <i class="bi bi-three-dots"></i>
+        </div>
+    </div>
+    <div class="terminal-content">
+        <div class="terminal-header-info">
+            <div class="terminal-user">Agustin-Gibaut@DESKTOP-PROJECT MINGW64 ~/projects</div>
+        </div>
+        <div class="terminal-session">
+            <div class="terminal-project-list">
+
+                <!-- Proyecto 1 -->
+                <div class="mb-3">
+                    <strong>ROADMAP</strong>
+                    <p>Roadmap para aprender desarrollo web en 2025.</p>
+                    <a href="https://roadmap-web-beta.vercel.app/" target="_blank" class="text-decoration-none text-reset">
+                        <i class="fas fa-globe me-2"></i>Ver Sitio Web
+                    </a>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="mb-3">
+                    <strong>POKEDEX</strong>
+                    <p>Aplicación para buscar y ver detalles de películas usando API externa.</p>
+                    <a href="https://pokedex-rho-gules-35.vercel.app/" target="_blank" class="text-decoration-none text-reset">
+                        <i class="fas fa-globe me-2"></i>Ver Sitio Web
+                    </a>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="mb-3">
+                    <strong>PAINT WEB </strong>
+                    <p>PAINT EN FOTMATO WEB .</p>
+                    <a href="https://paint-red.vercel.app/" target="_blank" class="text-decoration-none text-reset">
+                        <i class="fas fa-globe me-2"></i>Ver Sitio Web
+                    </a>
+                </div>
+
+              
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                 
+
+            <footer style="margin-top:2rem; padding:1.2rem 0; background:#181818; color:#bbb; text-align:center; font-family:monospace; font-size:1rem;">
+                <div>
+                    © 2025 Agustin Gibaut &mdash; Hecho con <i class="fas fa-code"></i>, <i class="fas fa-mug-hot" style="color:#b87333;"></i> y <i class="fas fa-heart" style="color:#e25555;"></i>
+                </div>
+                <div style="margin-top:0.5rem;">
+                    <a href="https://github.com/AgustinGibaut" target="_blank" style="color:#bbb; margin:0 0.5rem; text-decoration:none;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:agusgibaut693@gmail.com" style="color:#bbb; margin:0 0.5rem; text-decoration:none;">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/agustin-gibaut-61baa5327/" target="_blank" style="color:#bbb; margin:0 0.5rem; text-decoration:none;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </footer>
+       
+            <script src="script.js"></script>
+</body>
+</html>
+   
