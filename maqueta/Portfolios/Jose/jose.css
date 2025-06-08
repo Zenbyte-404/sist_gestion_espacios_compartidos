@@ -1,0 +1,414 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e2326;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.content-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.content-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.content-header header .logo a{
+    font-family: Arial;
+    font-size: 36px;
+    text-decoration: none;
+    color: #1cb698;
+}
+
+.content-header header ul{
+    display: flex;
+    list-style: none;
+}
+.content-header header nav ul li a{
+    text-align: none;
+    color: white;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.content-header header nav ul li a:hover{
+    color: #1cb698;
+}
+.nav-responsive{
+    background-color: #1cb698;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+} 
+
+.logo img{
+    width: 100px;
+    border: none;
+}
+
+/* Seccion inicio */
+
+.home{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(image/fondo3.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 350px;
+    border: 7px solid #1cb698;
+}
+.home .content-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 48px;
+}
+
+.home .content-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+}
+
+.home .content-banner h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* Seccion sobre mi */
+
+
+.about-me{
+    background-color: #1e2326;
+    color: white;
+    padding: 50px 20px;
+}
+
+.about-me .content-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.about-me h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.about-me .content-seccion p{
+    font: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.about-me .content-seccion p span{
+    color: #1cb698;
+    font-weight: bold;
+}
+.about-me .row{
+    display: flex;
+}
+.about-me .row .col{
+    width: 50%;
+}
+.about-me .row .col h3{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+.about-me .row .col ul{
+    list-style: none;
+}
+.about-me .row .col ul li{
+    margin: 12px 0;
+}
+.about-me .row .col ul li strong{
+    display: inline-block;
+    color: #1cb698;
+    width: 130px;
+}
+.about-me .row .col ul li span{
+    background-color: #1cb698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.about-me .row .col .content-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-me .row .col .content-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.about-me .row .col .content-intereses .interes:hover{
+    background-color: #1cb698;
+}
+.about-me .row .col .content-intereses .interes i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.about-me button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color:white;
+    transition: .3s;
+} .about-me button:hover{
+    background-color: #1cb698;
+    color: black;
+    border: 2px solid black;
+}
+
+/* seccion skills */
+
+.skills{
+    background-color: #252a2e;
+    color: white;
+    padding: 50px 20px;
+}
+
+.about-me .content-skills{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.skills .fila .col ul li{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.skills .fila .col .content-technical-skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills .fila .col .content-technical-skills .skill{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.skills .fila .col .content-technical-skills .skill:hover{
+    background-color: #1cb698;
+}
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skill i{
+    font-size: 50px;
+}
+
+/* seccion proyectos */
+
+
+.projects{
+    background-color: #1e2326;
+    color: white;
+    padding: 50px 20px;
+}
+.projects .content-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.projects h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.projects .galery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.projects .galery .project{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.projects .galery .project img{
+    width: 100%;
+    display: block;
+}
+.projects .galery .project .overlay{
+    position: absolute;
+    top: 0;
+    width: 102%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}.projects .galery .project .overlay:hover{
+    opacity: 1;
+}
+.projects .galery .project .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}.projects.galery.project.overlay:hover h3{
+    margin-bottom: 0px;
+}
+
+
+
+
+
+/* seccion contacto */
+
+.contact{
+    background: linear-gradient(rgba(30,35,38,.8), rgba(30,35,38,.8)), url(image/fondo.jpg);
+    color: white;
+    padding: 50px 20px;
+}
+
+.contact .content-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact .content-seccion{
+    text-align: center;
+}
+
+
+.contact .content-seccion .redes a{
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 40px 5px;
+    font-size: 25px;
+    transition: .3s;
+    text-align: center;
+}.contact .content-seccion .redes a:hover{
+    background-color: #1cb698;
+}
+
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 75px;
+        background-color: #252a2e;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid white;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .about-me .row{
+        display: block;
+    }
+    .about-me .row .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+
+    .projects .galery{
+        display: block;
+        width: 100%;
+    }
+    .projects .galery .project{
+        max-width: 100%;
+    }
+    .projects .galery .project img{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
