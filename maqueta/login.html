@@ -1,43 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login de Usuario</title>
-  <link rel="stylesheet" href="css/login.css" />
-  <!-- Si usas FontAwesome para el ícono de login -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-  <style>
-    .header-nav {
-      display: flex;
-      justify-content: center;
-      margin-top: 16px;
-      margin-bottom: 32px;
-    }
-    .header-nav ul {
-      display: flex;
-      gap: 16px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .header-nav a {
-      text-decoration: none;
-      transition: box-shadow 0.2s;
-    }
-    .header-nav a:hover {
-      box-shadow: 0 2px 8px rgba(54,209,196,0.15);
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="prueba.css">
 </head>
-<body>
-<header class="logo-header" style="display: flex; align-items: center; justify-content: space-between; padding: 0 32px; margin-top: 16px; margin-bottom: 32px;">
-  <div class="logo" style="display: flex; align-items: center;">
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+ <header class="container py-3 d-flex align-items-center flex-wrap">
+  <div class="d-flex align-items-center mb-2 mb-md-0">
     <svg
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      style="height: 40px; width: 40px; margin-right: 12px;"
+      style="height: 2.5rem; width: 2.5rem; margin-right: 0.75rem;"
+      class="text-white"
     >
       <rect
         x="3"
@@ -59,64 +38,51 @@
         stroke-linejoin="round"
       />
     </svg>
-    <h1 class="logo-text" style="color: #fff; font-size: 1.7rem; margin: 0;">ReservaYa</h1>
+    <h1 class="h3 mb-0 fw-bold">ReservaYa</h1>
   </div>
-  <!-- Nav a la derecha -->
-  <nav aria-label="Menú principal" class="header-nav" style="margin: 0;">
-    <ul>
-      <li>
-        <a href="index.html" class="nav-link nav-glow slide-down delay-100" aria-current="page" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
-          Inicio
-        </a>
+
+  <nav aria-label="Menú principal" class="ms-auto">
+    <ul class="nav gap-2">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link btn btn-secondary fw-semibold rounded-pill px-3 text-white" aria-current="page">Inicio</a>
       </li>
-      <li>
-        <a href="quienes_somos.html" class="nav-link nav-glow slide-down delay-200" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
-          Quiénes somos
-        </a>
+      <li class="nav-item">
+        <a href="quienes_somos.html" class="nav-link btn btn-secondary fw-semibold rounded-pill px-3 text-white">Quiénes somos</a>
       </li>
-      <li>
-        <a href="objetivo.html" class="nav-link nav-glow slide-down delay-200" style="color: #fff; background: linear-gradient(90deg, #232526 0%, #414345 100%); border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
-          Objetivo
-        </a>
-      </li>
-      <li>
-        <a href="login.html" class="nav-link-green nav-glow slide-down delay-400" style="background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%); color: #fff; border-radius: 8px; padding: 6px 18px; font-weight: 600; display: inline-flex; align-items: center;">
-          <i class="fas fa-sign-in-alt" aria-hidden="true" style="margin-right: 8px;"></i>
-          <span style="background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%); color: #fff; border-radius: 8px; padding: 0 4px;">Login</span>
-        </a>
+      <li class="nav-item">
+        <a href="objetivo.html" class="nav-link btn btn-secondary fw-semibold rounded-pill px-3 text-white">Objetivo</a>
       </li>
     </ul>
   </nav>
 </header>
 
-  <div class="login-container">
-    <h2>Iniciar Sesión</h2>
-    <form>
-      <label for="usuario">Usuario</label>
-      <input type="text" id="usuario" name="usuario" required />
+  <main class="container flex-grow-1 d-flex justify-content-center align-items-center">
+    <div class="login-container bg-info bg-opacity-75 p-4 rounded-4 shadow">
+      <h2 class="text-center text-dark mb-4">Iniciar Sesión</h2>
+      <form>
+        <div class="mb-3">
+          <label for="usuario" class="form-label fw-bold text-dark">Usuario</label>
+          <input type="text" id="usuario" name="usuario" required class="form-control">
+        </div>
 
-      <label for="contraseña">Contraseña</label>
-      <input type="password" id="contraseña" name="contraseña" required />
+        <div class="mb-3">
+          <label for="contraseña" class="form-label fw-bold text-dark">Contraseña</label>
+          <input type="password" id="contraseña" name="contraseña" required class="form-control">
+        </div>
 
-      <div class="ver-contraseña">
-        <input type="checkbox" id="mostrarContraseña" onclick="togglePassword()" />
-        <label for="mostrarContraseña">Mostrar contraseña</label>
-      </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" id="mostrarContraseña" class="form-check-input" disabled>
+          <label for="mostrarContraseña" class="form-check-label text-dark">Mostrar contraseña (sin funcionalidad)</label>
+        </div>
 
-      <button type="submit">Ingresar</button>
+        <button type="submit" class="btn btn-dark w-100 fw-bold">Ingresar</button>
 
-      <p class="registro-texto">
-        ¿No tienes cuenta? <a href="#">Registrarse</a>
-      </p>
-    </form>
-  </div>
-
-  <script>
-    function togglePassword() {
-      const input = document.getElementById("contraseña");
-      input.type = input.type === "password" ? "text" : "password";
-    }
-  </script>
+        <p class="registro-texto text-center mt-3 text-dark">
+          ¿No tienes cuenta? <a href="#" class="fw-semibold text-decoration-none text-primary">Registrarse</a>
+        </p>
+      </form>
+    </div>
+  </main>
 
 </body>
 </html>
