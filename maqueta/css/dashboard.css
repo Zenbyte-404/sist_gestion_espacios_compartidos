@@ -1,4 +1,4 @@
-/* Base Styles & Variables */
+
 :root {
   --primary-color: #1a73e8;
   --primary-light:  #ffffff;
@@ -20,8 +20,6 @@
   --sidebar-width: 260px;
   --header-height: 64px;
   --transition: all 0.3s ease;
-  /* Colores principales */
-  /* Colores principales */
   --color-bg: #0a0a1a;
   --color-primary: #ffffff;
   --color-subtext: #b8b8d4;
@@ -55,14 +53,12 @@ ul {
   list-style: none;
 }
 
-/* Dashboard Container */
 .dashboard-container {
   display: flex;
   min-height: 100vh;
   position: relative;
 }
 
-/* Sidebar */
 .sidebar {
   width: var(--sidebar-width);
   background-color: var(--color-blueblack);
@@ -171,7 +167,6 @@ ul {
   color: var(--color-accent-dark);
 }
 
-/* Sidebar Toggle */
 .sidebar-toggle {
   display: none;
 }
@@ -180,7 +175,6 @@ ul {
   transform: translateX(0);
 }
 
-/* Main Content */
 .main-content {
   flex: 1;
   margin-left: var(--sidebar-width);
@@ -188,7 +182,6 @@ ul {
   background-color: --;
 }
 
-/* Top Header */
 .top-header {
   height: var(--header-height);
   background-color: var(--color-blueblack);
@@ -305,12 +298,10 @@ ul {
   color: var(--primary-light);
 }
 
-/* Dashboard Content */
 .dashboard-content {
   padding: 1.5rem;
 }
 
-/* Stats Section */
 .stats-section {
   margin-bottom: 1.5rem;
 }
@@ -389,7 +380,6 @@ ul {
   color: var(--danger-color);
 }
 
-/* Dashboard Grid */
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -470,7 +460,6 @@ ul {
   text-decoration: underline;
 }
 
-/* Chart */
 .chart-container {
   padding: 1.5rem;
   height: 300px;
@@ -522,7 +511,6 @@ ul {
   color: var(--text-secondary);
 }
 
-/* Table */
 .table-container {
   overflow-x: auto;
 }
@@ -583,7 +571,6 @@ ul {
   color: var(--warning-color);
 }
 
-/* Spaces Grid */
 .spaces-grid {
   padding: 1.5rem;
   display: flex;
@@ -641,7 +628,6 @@ ul {
   background-color: var(--warning-color);
 }
 
-/* Filter Tabs */
 .filter-tabs {
   display: flex;
   gap: 0.5rem;
@@ -661,7 +647,6 @@ ul {
   color: var(--white);
 }
 
-/* Calendar */
 .calendar-nav {
   display: flex;
   align-items: center;
@@ -723,7 +708,6 @@ ul {
   color: var(--gray);
 }
 
-/* Quick Actions */
 .quick-actions {
   padding: 1.5rem;
   display: grid;
@@ -759,7 +743,6 @@ ul {
   font-size: 0.9rem;
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .chart-card {
     grid-column: span 12;
@@ -854,7 +837,6 @@ ul {
   }
 }
 
-/* CSS-only Sidebar Toggle for Mobile */
 #sidebar-toggle:checked ~ .sidebar {
   transform: translateX(0);
 }
@@ -870,7 +852,6 @@ ul {
   z-index: 999;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
