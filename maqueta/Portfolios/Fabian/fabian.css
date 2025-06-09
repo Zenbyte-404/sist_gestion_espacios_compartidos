@@ -1,0 +1,243 @@
+/* css/styles.css */
+
+:root {
+    --dark-bg: #1a1a1a; 
+    --text-color: #ffffff; 
+    --accent-color: #28a745; 
+    --light-grey-text: #b0b0b0; 
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--dark-bg); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+}
+
+.header .logo span {
+    color: var(--text-color);
+}
+
+.header .navbar-nav .nav-link {
+    color: var(--light-grey-text);
+    transition: color 0.3s ease;
+}
+
+.header .navbar-nav .nav-link:hover {
+    color: var(--text-color);
+}
+
+.header .btn-outline-light:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.hero {
+    min-height: 80vh; 
+    background-color: var(--dark-bg);
+    padding-top: 120px;
+    padding: 80px 0; 
+    display: flex; 
+    align-items: center; 
+}
+
+.hero h1 {
+    font-size: 3.0rem; 
+    line-height: 1.2;
+}
+
+.hero .custom-btn-green {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px; 
+    text-decoration: none; 
+}
+
+.hero .custom-btn-green:hover {
+    background-color: #218838; 
+    border-color: #218838;
+}
+
+.hero .social-links a {
+    font-size: 1.5rem; 
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    text-decoration: none; 
+}
+
+.hero .social-links a:hover {
+    opacity: 1;
+    color: var(--accent-color) !important; 
+}
+
+.hero-image-container {
+    width: 300px; 
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--accent-color); 
+    margin: 0 auto; 
+    border-radius: 50%; 
+}
+
+.hero-profile-img {
+    width: 98%; 
+    height: 98%; 
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translateY(1%); 
+    
+}
+
+.about-me {
+    background-color: #161616; 
+    padding: 80px 0;
+}
+
+.about-me h2, .recent-works h2, .contact h2 {
+    position: relative;
+    padding-bottom: 15px;
+    color: var(--text-color);
+}
+
+.about-me h2::after, .recent-works h2::after, .contact h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color); 
+}
+
+.about-me .list-unstyled {
+    padding-left: 0; 
+}
+
+.about-me .list-unstyled li {
+    font-size: 1.1rem;
+    list-style: none; 
+    margin-bottom: 15px; 
+}
+
+.about-me .list-unstyled li i {
+    color: var(--accent-color);
+}
+
+
+.recent-works {
+    background-color: var(--dark-bg);
+    padding: 80px 0;
+}
+
+.recent-works .card {
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.recent-works .card-title {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.recent-works .card-text {
+    color: var(--light-grey-text);
+}
+
+.recent-works .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: background-color 0.3s ease;
+}
+
+.recent-works .btn-primary:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+
+.contact {
+    background-color: #161616;
+    padding: 80px 0;
+}
+
+.contact .social-links a {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    text-decoration: none; 
+}
+
+.contact .social-links a:hover {
+    opacity: 1;
+    color: var(--accent-color) !important;
+}
+
+
+.footer {
+    background-color: #101010; 
+    color: var(--light-grey-text);
+    font-size: 0.9rem;
+    padding: 20px 0;
+}
+
+
+
+@media (max-width: 991.98px) { 
+    .hero h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .hero .social-links, .hero .custom-btn-green {
+        text-align: center;
+        width: 100%; 
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero .custom-btn-green {
+        margin-bottom: 20px;
+    }
+    .hero-image-container {
+        width: 200px;
+        height: 200px;
+        margin: 30px auto 0; 
+    }
+    .about-me .lead {
+        text-align: center;
+    }
+    .about-me .list-unstyled {
+        padding-left: 0;
+        text-align: left; 
+    }
+    .about-me .list-unstyled li {
+        
+        text-align: left; 
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .header .logo span {
+        font-size: 1.2rem;
+    }
+}
