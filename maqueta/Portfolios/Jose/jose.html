@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="jose.css">
+    <title>Mi porfolio</title>
+    <link rel="icon" href="image/jt DEV.png">
+</head>
+<body>
+    <div class="content-header">
+        <header>
+            <div class="logo">
+                <img src="image/jt DEV.png" alt="">
+                <a href="#home"></a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home" onclick="seleccionar()">Inicio</a></li>
+                    <li><a href="#about-me" onclick="seleccionar()">Sobre mi</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">Skills</a></li>
+                    <li><a href="#projects" onclick="seleccionar()">Proyectos</a></li>
+                    <li><a href="#contact" onclick="seleccionar()">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <section id="home" class="home">
+        <div class="content-banner">
+            <div class="content-img">
+                <img src="image/fotoperfil.jpg" alt="">
+            </div>
+            <h1>Hola, mi nombre es José Tiranti.</h1>
+            <h2>Soy desarrollador de Software.</h2>
+        </div>
+    </section>
+    <section id="about-me" class="about-me">
+        <div class="content-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola soy José Ignacio Tiranti</span> y les contaré un poco sobre mí. Desde muy pequeño me ha fascinado el mundo de la tecnología. Durante mi adolescencia, pasaba mucho tiempo trasteando con celulares y computadoras. Uno de mis sueños era ser desarrollador en una gran empresa, pero lo veía como algo muy complicado. En el 2022 me interesé más en el tema y me di cuenta de que podía hacerlo, ya que se me daba bastante bien. Por lo tanto, decidí inscribirme en UTN FRRE, donde estaban ofreciendo una diplomatura en Desarrollo Web, que era lo que me interesaba. Ahí comencé a adquirir mis primeras herramientas, lo que me ayudó a entender mucho sobre el funcionamiento de la mente de un desarrollador. Actualmente, sigo adquiriendo conocimientos en ISPC voy por el segundo año de la carrera de Técnico superior en desarrollo de software y tambien aprendiendo tecnologias por mi cuenta a través de internet.</p>
+
+            <div class="row">
+                <div class="col">
+                    <h3>Datos personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            04/10/2000
+                        </li>
+                        <li>
+                            <strong>Telefono</strong>
+                            3562-521192
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            josi.tiranti@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Córdoba Capital,Córdoba, Argentina
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="content-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Videjuegos</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>Deportes</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-music"></i>
+                            <span>Musica</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>Tecnologia</span>
+                        </div>
+                        <div class="interes">
+                            <i class="far fa-handshake"></i>
+                            <span>Amigos</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <button class="descarga">
+                Descargar CV <i class="fa-solid fa-file-arrow-down"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+    <div class="contennt-skills">
+    <h2>Skills</h2>
+    <div class="fila">
+        <div class="col">
+            <h3>Technical Skills</h3>
+            <div class="content-technical-skills">
+                <div class="skill">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-js"></i>
+                    <span>Javascript</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <span>BOOTSTRAP</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h3>Professional skills</h3>
+            <ul>
+                <li>Creatividad</li>
+                <li>Trabajo en equipo</li>
+                <li>Compromiso</li>
+                <li>Dedicación</li>
+                <li>Facilidad para aprender</li>
+                <li>Disponibilidad total</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="content-seccion">
+            <h2>Mis Proyectos</h2>
+            <div class="galery">
+                <div class="project">
+                    <img src="image/ComingSoon.jpg" alt="">
+                    <div class="overlay">
+                        <h3>ComingSoon</h3>
+                        <p>comingsoon</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="image/ComingSoon.jpg" alt="">
+                    <div class="overlay">
+                        <h3>ComingSoon</h3>
+                        <p>comingsoon</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="image/ComingSoon.jpg" alt="">
+                    <div class="overlay">
+                        <h3>ComingSoon</h3>
+                        <p>comingsoon</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="image/ComingSoon.jpg" alt="">
+                    <div class="overlay">
+                        <h3>ComingSoon</h3>
+                        <p>comingsoon</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <footer class="contact" id="contact">
+        <div class="content-seccion">
+            <h2>Contacto</h2>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/jos%C3%A9-ignacio-tiranti-166451254/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/jose_tiranti/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/jose.i.tiranti/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/JoseTiranti" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.introduccion {
+    text-align: center;
+    padding: 3rem 15rem;
+}
+
+.introduccion p{
+    padding: 2rem;
+}
+
+@media (max-width: 960px){
+    .introduccion {
+    text-align: center;
+    padding: 2rem 5rem;
+}
+
+.introduccion p{
+    padding: 1,5rem;
+}
+}
+
+@media (max-width: 768px){
+    .introduccion {
+    text-align: center;
+    padding: 1rem 5rem;
+}
+
+.introduccion p{
+    padding: 1rem;
+}
+}
+
+@media (max-width: 576px){
+    .introduccion {
+    text-align: center;
+    padding: 4rem 1rem 2rem 1rem;
+}
+
+.introduccion p{
+    padding: 1rem;
+}
+}
+
+.introduccion h1{
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.habilidades{
+    padding: 2rem;
+}
+
+.habilidades h2{
+    color: #002626;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 576px){
+  .row{
+    padding: 0rem 2rem;
+  }
+  .git{
+    margin-left: 2rem;
+  }
+  .github{
+    margin-right: 2rem;
+  }
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.seccionProyectos {
+  background-color: #ffffff; 
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.proyectosTitulo{
+    color: #002626;
+    text-align: center;
+}
+
+
+.proyecto{
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 0;
+}
+
+.ecommerce{
+  padding: 10px;
+}
+
+.proyecto p{
+  padding: 1rem;
+}
+.proyectoNombre {
+  background-color: #002626;
+  color: #ffffff; 
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.enlace {
+  color: #928f8d;
+  text-decoration: underline;
+}
+
+.enlace:hover {
+  text-decoration: none;
+}
+
+.seccionContactos{
+    background-color: #ffffff;
+    border-radius: 1em;
+    padding: 10rem;
+
+}
+
+@media (max-width: 768px) {
+  .seccionContactos{
+    padding: 3rem;
+  }
+}
+
+.contactoTitulo{
+    text-align: center;
+    color: #002626;
+}
+.contact-info {
+  background-color: #fff; 
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.enviar{
+  background-color:#002626;
+  color: #928f8d;
+}
