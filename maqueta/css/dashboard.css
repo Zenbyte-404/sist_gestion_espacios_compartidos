@@ -200,6 +200,18 @@ ul {
   align-items: center;
   gap: 1rem;
 }
+.alert-card {
+  background: #ffe8e8;
+  border-left: 5px solid #e63946;
+}
+
+.alert-card .stat-icon.red {
+  background: #e63946;
+}
+
+.stat-change.negative {
+  color: #e63946;
+}
 
 .menu-toggle {
   display: none;
