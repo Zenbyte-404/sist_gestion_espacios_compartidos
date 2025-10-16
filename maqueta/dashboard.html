@@ -1,248 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Espacios Compartidos</title>
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        /* Ajustes adicionales para gráficos y alerta */
-        canvas {
-            max-width: 100%;
-        }
-        .alert-card {
-            background: #ffecec;
-            border-left: 5px solid #e74a3b;
-            color: #333;
-        }
-        .alert-card h3 {
-            color: #e74a3b;
-        }
-        .alert-body p {
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Dashboard de Reservas Interactivo</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; margin: 0; }
+    header { background: #004aad; color: white; padding: 1rem; text-align: center; }
+    .chart { max-width: 1000px; margin: 2rem auto; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+    h2 { text-align: center; }
+  </style>
 </head>
 <body>
-    <div class="dashboard-container">
-        <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <h2 class="logo">
-                    <span>RESERVITA</span>
-                </h2>
-                <label for="sidebar-toggle" class="sidebar-close">
-                    <i class="fas fa-times"></i>
-                </label>
-            </div>
-            
-            <nav class="sidebar-menu">
-                <ul>
-                    <li class="menu-item active">
-                        <a href="#dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-                    </li>
-                    <li class="menu-item"><a href="#spaces"><i class="fas fa-door-open"></i><span>Espacios</span></a></li>
-                    <li class="menu-item"><a href="#bookings"><i class="fas fa-calendar-alt"></i><span>Reservas</span></a></li>
-                    <li class="menu-item"><a href="#users"><i class="fas fa-users"></i><span>Usuarios</span></a></li>
-                    <li class="menu-item"><a href="#reports"><i class="fas fa-chart-bar"></i><span>Reportes</span></a></li>
-                    <li class="menu-item"><a href="#billing"><i class="fas fa-credit-card"></i><span>Facturación</span></a></li>
-                    <li class="menu-item"><a href="#settings"><i class="fas fa-cog"></i><span>Configuración</span></a></li>
-                </ul>
-            </nav>
-            
-            <div class="sidebar-footer">
-                <div class="user-info">
-                    <img src="imagenes-nosotros/Nico.JPG" alt="Usuario" class="user-avatar">
-                    <div class="user-details">
-                        <h4>Admin User</h4>
-                        <p>Administrador</p>
-                    </div>
-                </div>
-            </div>
-        </aside>
+  <header>
+    <h1>📊 Dashboard de Reservas Interactivo</h1>
+  </header>
 
-        <main class="main-content">
-            <header class="top-header">
-                <div class="header-left">
-                    <label for="sidebar-toggle" class="menu-toggle">
-                        <i class="fas fa-bars"></i>
-                    </label>
-                    <h1>Dashboard</h1>
-                </div>
-                <div class="header-right">
-                    <div class="search-box">
-                        <input type="text" placeholder="Buscar...">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="notifications">
-                        <i class="fas fa-bell"></i>
-                        <span class="badge">5</span>
-                    </div>
-                    <div class="user-profile">
-                        <img src="imagenes-nosotros/Nico.JPG" alt="Usuario">
-                        <span>Admin</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-            </header>
+  <!-- Heatmap -->
+  <div class="chart">
+    <h2>1. Heatmap reservas (día vs hora)</h2>
+    <div id="heatmap"></div>
+  </div>
 
-            <div class="dashboard-content">
-                <section class="stats-section">
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon blue"><i class="fas fa-door-open"></i></div>
-                            <div class="stat-details">
-                                <h3>24</h3>
-                                <p>Espacios Totales</p>
-                                <span class="stat-change positive">+2 este mes</span>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon green"><i class="fas fa-calendar-check"></i></div>
-                            <div class="stat-details">
-                                <h3>18</h3>
-                                <p>Espacios Ocupados</p>
-                                <span class="stat-change positive">75% ocupación</span>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon purple"><i class="fas fa-users"></i></div>
-                            <div class="stat-details">
-                                <h3>156</h3>
-                                <p>Usuarios Activos</p>
-                                <span class="stat-change positive">+12 esta semana</span>
-                            </div>
-                        </div>
-                        <div class="card alert-card">
-                            <div class="card-header">
-                            <h3><i class="fas fa-exclamation-triangle"></i> Alertas</h3>
-                                </div>
-                            <div class="alert-body">
-                                <p><strong>3 reservas</strong> están por vencer en menos de 1 hora.</p>
-                                <p><strong>2 espacios</strong> están en mantenimiento.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+  <!-- Histograma -->
+  <div class="chart">
+    <h2>2. Distribución de duración (horas)</h2>
+    <div id="histograma"></div>
+  </div>
 
-                <section class="dashboard-grid">
+  <!-- Barras -->
+  <div class="chart">
+    <h2>3. Reservas por tipo de espacio</h2>
+    <div id="barras"></div>
+  </div>
 
-                    <!-- GRAFICO 1 -->
-                    <div class="card chart-card">
-                        <div class="card-header">
-                            <h3>Ocupación por Día</h3>
-                        </div>
-                        <canvas id="ocupacionChart"></canvas>
-                    </div>
+  <script>
+    // ⚡ Simulamos los mismos datos que usaste en Colab.
+    // En la práctica podrías exportar estos arreglos desde Python como JSON.
+    
+    // 1️⃣ Heatmap: días (0 a 6) vs horas (8 a 20)
+    const dias = ['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];
+    const horas = Array.from({length: 13}, (_, i) => i + 8);
+    const heatmapData = {
+      z: [
+        [5,3,2,4,6,8,5,3,2,4,6,7,2],
+        [2,4,6,5,3,2,4,6,5,3,2,1,2],
+        [1,2,2,2,3,4,3,3,2,1,0,0,0],
+        [4,4,5,5,6,7,8,7,6,5,4,3,2],
+        [8,7,6,6,5,4,4,3,2,1,1,0,0],
+        [3,2,1,1,2,2,3,4,4,5,6,6,7],
+        [0,0,0,1,1,2,2,3,3,4,4,4,4]
+      ],
+      x: horas,
+      y: dias,
+      type: 'heatmap',
+      colorscale: 'Viridis'
+    };
+    Plotly.newPlot('heatmap', [heatmapData], {
+      xaxis: { title: 'Hora' },
+      yaxis: { title: 'Día semana' },
+      margin: { t: 30 }
+    });
 
-                    <!-- GRAFICO 2 -->
-                    <div class="card chart-card">
-                        <div class="card-header">
-                            <h3>Estado de Reservas</h3>
-                        </div>
-                        <canvas id="estadoChart"></canvas>
-                    </div>
+    // 2️⃣ Histograma de duración (igual al df['duracion_h'].hist)
+    const duraciones = [1,1,1,2,2,3,2,4,3,3,3,2,1,2,3,4,5,1,2,2,3,4,4,5];
+    Plotly.newPlot('histograma', [{
+      x: duraciones,
+      type: 'histogram',
+      xbins: { start: 1, end: 5, size: 1 },
+      marker: { color: '#004aad' }
+    }], {
+      xaxis: { title: 'Horas' },
+      yaxis: { title: 'Frecuencia' },
+      margin: { t: 30 }
+    });
 
-
-
-
-                    <!-- RESERVAS RECIENTES -->
-                    <div class="card bookings-card">
-                        <div class="card-header">
-                            <h3>Reservas Recientes</h3>
-                            <a href="#" class="view-all">Ver todas</a>
-                        </div>
-                        <div class="table-container">
-                            <table class="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>Usuario</th>
-                                        <th>Espacio</th>
-                                        <th>Fecha</th>
-                                        <th>Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><div class="user-cell"><img src="" alt=""><span>Ana García</span></div></td>
-                                        <td>Sala de Reuniones A</td>
-                                        <td>Hoy, 14:00</td>
-                                        <td><span class="status active">Activa</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="user-cell"><img src="https://via.placeholder.com/30" alt=""><span>Carlos López</span></div></td>
-                                        <td>Escritorio 15</td>
-                                        <td>Hoy, 09:00</td>
-                                        <td><span class="status completed">Completada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="user-cell"><img src="https://via.placeholder.com/30" alt=""><span>María Rodríguez</span></div></td>
-                                        <td>Sala de Conferencias</td>
-                                        <td>Mañana, 10:00</td>
-                                        <td><span class="status pending">Pendiente</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="user-cell"><img src="https://via.placeholder.com/30" alt=""><span>Juan Martínez</span></div></td>
-                                        <td>Escritorio 8</td>
-                                        <td>Hoy, 16:00</td>
-                                        <td><span class="status active">Activa</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </section>
-            </div>
-        </main>
-    </div>
-
-    <!-- ==================== SCRIPTS ==================== -->
-    <script>
-        // 📊 Ocupación por día
-        const ocupacionData = {
-            labels: ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
-            datasets: [{
-                label: 'Ocupación (%)',
-                data: [60, 80, 45, 90, 75, 65, 85],
-                backgroundColor: '#4e73df'
-            }]
-        };
-
-        const ocupacionConfig = {
-            type: 'bar',
-            data: ocupacionData,
-            options: {
-                responsive: true,
-                scales: {
-                    y: { beginAtZero: true, max: 100 }
-                }
-            }
-        };
-
-        new Chart(document.getElementById('ocupacionChart'), ocupacionConfig);
-
-        // 📈 Estado de reservas
-        const estadoData = {
-            labels: ["Activa", "Completada", "Pendiente", "Cancelada"],
-            datasets: [{
-                data: [18, 12, 6, 2],
-                backgroundColor: ['#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b']
-            }]
-        };
-
-        const estadoConfig = {
-            type: 'doughnut',
-            data: estadoData,
-            options: {
-                responsive: true,
-                plugins: { legend: { position: 'bottom' } }
-            }
-        };
-
-        new Chart(document.getElementById('estadoChart'), estadoConfig);
-    </script>
+    // 3️⃣ Barras por tipo de espacio
+    const espacios = ['Sala de estudio', 'Coworking', 'Laboratorio', 'Cancha'];
+    const cantidades = [30, 15, 10, 8];
+    Plotly.newPlot('barras', [{
+      x: espacios,
+      y: cantidades,
+      type: 'bar',
+      marker: { color: '#00aaff' }
+    }], {
+      xaxis: { title: 'Espacio' },
+      yaxis: { title: 'Cantidad' },
+      margin: { t: 30 }
+    });
+  </script>
 </body>
 </html>
